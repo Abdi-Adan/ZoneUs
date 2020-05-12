@@ -43,11 +43,6 @@ position:absolute;
     <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
       <div class="container-fluid">
 
-        <!-- Brand -->
-        <a class="navbar-brand waves-effect" href="https://mdbootstrap.com/docs/jquery/" target="_blank">
-          <strong class="blue-text">ZoneUS</strong>
-        </a>
-
         <!-- Collapse -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,19 +54,14 @@ position:absolute;
 
           <!-- Left -->
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link waves-effect" href="#">Home
-                <span class="sr-only">(current)</span>
-              </a>
+            <li>
+              <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalLoginAvatarDemo"><strong>Profile</strong></button>
             </li>
-            <li class="nav-item">
-              <a class="nav-link waves-effect" href="#" target="_blank">Explore</a>
+            <li>
+              <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modalLoginAvatarDemo"><strong>Explore</strong></button>
             </li>
-            <li class="nav-item">
-              <a class="nav-link waves-effect" href="#">Profile</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link waves-effect" href="#" target="_blank">Trending</a>
+            <li>
+              <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modalLoginAvatarDemo"><strong>Trending</strong></button>
             </li>
           </ul>
 
@@ -83,13 +73,15 @@ position:absolute;
             <li>
               <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalLoginAvatarDemo">Signup</button>
             </li>
-            <form class="d-flex justify-content-center">
-              <!-- Default input -->
-              <input type="search" placeholder="Search" aria-label="Search" class="form-control">
-              <button class="btn btn-primary btn-sm my-0 p" type="submit">
-                <i class="fas fa-search"></i>
-              </button>
-            </form>
+            <li>
+              <form class="d-flex justify-content-center">
+                <!-- Default input -->
+                <input type="search" placeholder="Search" aria-label="Search" class="form-control">
+                <button class="btn btn-primary btn-sm my-0 p" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+              </form>
+            </li>
           </ul>
 
         </div>
@@ -101,19 +93,18 @@ position:absolute;
     <!-- Sidebar -->
     <div class="sidebar-fixed position-fixed">
       <a class="logo-wrapper waves-effect">
-        <img src="https://mdbootstrap.com/img/logo/mdb-email.png" class="img-fluid" alt=""></a>
+        <h1><strong class="orange-text">ZoneUS</strong></h1>
+      </a>
       <div class="list-group list-group-flush">
         <a href="#" class="list-group-item active waves-effect">
           <i class="fas fa-chart-pie mr-3"></i>World
         </a>
         <a href="#" class="list-group-item list-group-item-action waves-effect">
           <i class="fas fa-user mr-3"></i>Origin</a>
-        <a href="#" class="list-group-item list-group-item-action waves-effect">
-          <i class="fas fa-table mr-3"></i>Saudi Arabia</a>
-        <a href="#" class="list-group-item list-group-item-action waves-effect">
-          <i class="fas fa-map mr-3"></i>USA</a>
-        <a href="#" class="list-group-item list-group-item-action waves-effect">
-          <i class="fas fa-money-bill-alt mr-3"></i>UK</a>
+        {% for i in n %}
+          <a href="#" class="list-group-item list-group-item-action waves-effect">
+            <i class="fas fa-map mr-3"></i>Nairobi</a>
+        {% endfor %}
       </div>
     </div>
     <!-- Sidebar -->
