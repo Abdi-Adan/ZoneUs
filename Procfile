@@ -1,1 +1,1 @@
-web: gunicorn ZoneUS.wsgi
+web: gunicorn zoneus.wsgi
